@@ -5,7 +5,7 @@
 Summary:	Hatch plugin for versioning with your preferred VCS
 Name:		python3-%{module}
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries/Python
 # if pypi:
@@ -19,6 +19,7 @@ BuildRequires:	python3-installer
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 2.044
 Requires:	python3-modules >= 1:3.2
+Obsoletes:	python3-hatch_vcs < 0.4.0-10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
