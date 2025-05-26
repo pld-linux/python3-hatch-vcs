@@ -1,8 +1,10 @@
+#
 # Conditional build:
 %bcond_without	tests	# unit tests
 
 %define		module	hatch-vcs
 Summary:	Hatch plugin for versioning with your preferred VCS
+Summary(pl.UTF-8):	Wtyczka Hatcha do wersjonowania ulubionym VCS
 Name:		python3-%{module}
 Version:	0.4.0
 Release:	2
@@ -24,7 +26,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Hatch plugin for versioning with your preferred VCS.
+This provides a plugin for Hatch that uses your preferred version
+control system (like Git) to determine project versions.
+
+%description -l pl.UTF-8
+Ten pakiet zawiera wtyczkę Hatcha, wykorzystującą ulubiony system
+kontroli wersji (np. Git) do określania wersji pakietów.
 
 %prep
 %setup -q -n hatch_vcs-%{version}
