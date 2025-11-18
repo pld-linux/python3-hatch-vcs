@@ -6,25 +6,25 @@
 Summary:	Hatch plugin for versioning with your preferred VCS
 Summary(pl.UTF-8):	Wtyczka Hatcha do wersjonowania ulubionym VCS
 Name:		python3-%{module}
-Version:	0.4.0
-Release:	2
+Version:	0.5.0
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/hatch-vcs/
 Source0:	https://files.pythonhosted.org/packages/source/h/hatch-vcs/hatch_vcs-%{version}.tar.gz
-# Source0-md5:	d801fe7c3e5955307748f2790bbb3488
+# Source0-md5:	9a22a9f7203783e526959d34510a9672
 URL:		https://pypi.org/project/hatch-vcs/
 BuildRequires:	python3-build
 BuildRequires:	python3-hatchling >= 1.1.0
 BuildRequires:	python3-installer
-BuildRequires:	python3-modules >= 1:3.8
-BuildRequires:	python3-setuptools_scm >= 6.4.0
+BuildRequires:	python3-modules >= 1:3.9
+BuildRequires:	python3-setuptools_scm >= 8.2.0
 %if %{with tests}
 BuildRequires:	python3-pytest
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 2.044
-Requires:	python3-modules >= 1:3.8
+Requires:	python3-modules >= 1:3.9
 Obsoletes:	python3-hatch_vcs < 0.4.0-10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
